@@ -644,7 +644,7 @@ export default config;
 
 ## <a name="links">🔗 Assets</a>
 
-Assets used in the project can be found [here](https://drive.google.com/file/d/1HJh9OJOoPPB1aU__wpj0ln8yCYeYZJiA/view?usp=sharing)
+Assets used in the project can be found [here](https://drive.google.com/file/d/1ZmtiMilUYTp1wkiXWMFX6AUk-msE981-/view?usp=sharing)
 
 ## <a name="more">🚀 More</a>
 
