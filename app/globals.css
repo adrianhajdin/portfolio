@@ -34,6 +34,7 @@
 
     --radius: 0.5rem;
   }
+ 
 
   .dark {
     --background: 240 10% 3.9%;
@@ -66,6 +67,16 @@
   }
 }
 
+@media(max-width: 700px) {
+  .icon-social {
+    display:none
+  }
+}
+ @media(min-width: 700px) {
+   .burger {
+     display: none
+   }
+ }
 @layer base {
   * {
     @apply border-border !scroll-smooth;

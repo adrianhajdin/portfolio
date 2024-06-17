@@ -1,7 +1,6 @@
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+    { name: "Team", link: "#contact" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -173,43 +172,31 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Lawrence Ibarria | CEO",
+    desc: "Worked at NVIDIA for 10 years, was at Cruise automation and co-founder, CTO at Verdant Robotics. When not working, you’ll find Lawrence learning anything new on technology or writing a compiler for his own programming language.",
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: "https://res.cloudinary.com/dojwag3u1/image/upload/v1718563094/Lawrence_vqdx4d.jpg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    title: "Chad Hokama | CPO",
+    desc: "Chad has a data science background, he has worked at many startups, founded HarvestPort and was lead of data at Verdant Robotics. He has a deep understanding of ag and tech. When not working, you will find Chad on his farm with crops and animals.",
     className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
+
+     thumbnail: "https://res.cloudinary.com/dojwag3u1/image/upload/v1718563094/headshot_3_tdamtn.jpg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    title: "Kalin Mulliner | COO",
+    desc: "Kalin brings operations excellence with close to 20 years of experience leading wholesale, automotive, data infrastructure, and agtech ventures and programs. When not working, Kalin is exploring the great outdoors with his family.",
     className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
+       thumbnail: "https://res.cloudinary.com/dojwag3u1/image/upload/v1718563094/Kalin_na73ig.jpg",
   },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
+
 ];
 
 export const socialMedia = [
-  {
-    id: 1,
-    img: "/git.svg",
-  },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
+ 
   {
     id: 3,
     img: "/link.svg",
