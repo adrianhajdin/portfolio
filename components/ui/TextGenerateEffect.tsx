@@ -26,6 +26,9 @@ export const TextGenerateEffect = ({
     );
   }, [scope.current]);
 
+  const isHighlighted = (index: number) =>
+    (index >= 1 && index <= 2) || (index >= 4 && index <= 6);
+
   const renderWords = () => {
     return (
       <motion.div ref={scope}>
@@ -33,8 +36,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              // change here if idx is greater than 3, change the text color to #CBACF9
-              className={` ${idx > 3 ? "text-purple" : "dark:text-white text-black"
+              className={` ${isHighlighted(idx) ? "text-blue-400" : "dark:text-white text-black"
                 } opacity-0`}
             >
               {word}{" "}
