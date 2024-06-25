@@ -5,9 +5,12 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
-  const downloadFile = () =>{
-
-  }
+  const downloadFile = (fileName:string, fileUrl:string) => {
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = fileName;
+    link.click();
+  };
 
   return (
     <div className="pb-20 pt-36">
@@ -17,7 +20,7 @@ const Hero = () => {
        */}
       {/* TODO - Remove spotlights for perfromance boost */}
       <div>
-        {/* <Spotlight
+        <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
           fill="white"
         />
@@ -25,7 +28,7 @@ const Hero = () => {
           className="h-[80vh] w-[50vw] top-10 left-full"
           fill="purple"
         />
-        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" /> */}
+        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
       </div>
 
       {/**
@@ -66,7 +69,14 @@ const Hero = () => {
             Hi! I&apos;m Hakeem, a Next.js Developer based in Jamaica.
           </p>
 
-          <div onClick={() => downloadFile()}>
+          <div
+            onClick={() =>
+              downloadFile(
+                "Resume - Hakeem Clarke.pdf",
+                "/Resume - Hakeem Clarke.pdf"
+              )
+            }
+          >
             <MagicButton
               title="Download my CV"
               icon={<FaFileArrowDown />}
