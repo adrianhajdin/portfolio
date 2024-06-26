@@ -18,11 +18,12 @@ const Home = () => {
         <FloatingNav navItems={navItems} />
         <Hero />
         <Grid />
-        {/* <RecentProjects />
-        <Clients />
-        <Experience />
-        <Approach />
-        <Footer /> */}
+        {/* TODO - Add lazy loading */}
+        <RecentProjects />
+        {/* <Clients /> */}
+        {/* <Experience /> */}
+        {/* <Approach /> */}
+        <Footer />
       </div>
     </main>
   );
