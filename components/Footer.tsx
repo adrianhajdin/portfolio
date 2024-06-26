@@ -1,28 +1,26 @@
 import { FaLocationArrow } from "react-icons/fa6";
-
+import Image from "next/image";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 
 const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
-      {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
-        <img
+        <Image
           src="/footer-grid.svg"
           alt="grid"
           className="w-full h-full opacity-50 "
+          width={2000} height={2000}
         />
       </div>
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
+          Ready to hire a <span className="text-purple">digital magician?</span>
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+          Reach out to me today and let&apos;s discuss how we can build the future of the web together
         </p>
         {/* TODO - Add email to constants */}
         <a href="hakeem_clarke14@yahoo.com">
@@ -46,7 +44,7 @@ const Footer = () => {
               href={info.src}
               target="_blank"
             >
-              <img src={info.img} alt="icons" width={20} height={20} />
+              <Image src={info.img} alt="icons" width={20} height={20} />
             </a>
           ))}
         </div>
