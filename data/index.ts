@@ -206,16 +206,16 @@ export const socialMedia = [
   {
     id: 1,
     img: "/link.svg",
-    src: "",
+    src: "https://www.linkedin.com/in/hakeemclarke/",
   },
   {
     id: 2,
     img: "/git.svg",
-    src: "",
+    src: "https://github.com/hakeem-jc",
   },
-  // { Add Dribble
-  //   id: 1,
-  //   img: "/git.svg",
-  //   src: "",
-  // },
+  {
+    id: 3,
+    img: "/dribbble.svg",
+    src: "https://dribbble.com/HakeemC",
+  },
 ];
