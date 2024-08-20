@@ -9,6 +9,17 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Adrian's Portfolio",
   description: "Modern & Minimal JS Mastery Portfolio",
+  openGraph: {
+    images: [
+      {
+        url: '/jsm-logo.png',
+        width: 800,
+        height: 600,
+        alt: 'JS Mastery Logo',
+      },
+    ],
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
