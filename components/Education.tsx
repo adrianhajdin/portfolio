@@ -4,7 +4,7 @@ import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
 const Education = () => {
   return (
-    <section className="w-full py-20">
+    <section id="education" className="w-full py-20">
       <h1 className="heading text-white">
         My <span className="text-[#FC9313]">Education</span>
       </h1>
