@@ -6,7 +6,7 @@ const Education = () => {
   return (
     <section className="w-full py-20">
       <h1 className="heading text-white">
-        My <span className="text-[#FDB515]">Education</span>
+        My <span className="text-[#FC9313]">Education</span>
       </h1>
       <div className="my-20 w-full">
         <Card
@@ -16,7 +16,7 @@ const Education = () => {
         >
           <CanvasRevealEffect
             animationSpeed={3}
-            containerClassName="bg-gradient-to-r from-[#002676] to-[#FDB515] rounded-3xl overflow-hidden"
+            containerClassName="bg-gradient-to-r from-[#010133] to-[#FC9313] rounded-3xl overflow-hidden"
             colors={[
               [0, 38, 118], // Darker blue
               [253, 181, 21], // Gold
@@ -47,18 +47,17 @@ const Card = ({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="border border-[#FDB515]/[0.2] group/canvas-card flex items-center justify-center
-       dark:border-[#FDB515]/[0.2] w-full mx-auto p-4 relative h-[35rem] rounded-3xl"
+      className="border border-[#FC9313]/[0.2] group/canvas-card flex items-center justify-center
+ dark:border-[#FC9313]/[0.2] w-full mx-auto p-4 relative h-[35rem] rounded-3xl"
       style={{
-        background: "#002676",
-        backgroundImage:
-          "linear-gradient(90deg, #002676 0%, #001a4f 100%)",
-      }}
+        background: "#010133",
+        backgroundImage: "linear-gradient(90deg, #010133 0%, #010122 100%)",
+    }}
     >
-      <Icon className="absolute h-10 w-10 -top-3 -left-3 text-[#FDB515] opacity-30" />
-      <Icon className="absolute h-10 w-10 -bottom-3 -left-3 text-[#FDB515] opacity-30" />
-      <Icon className="absolute h-10 w-10 -top-3 -right-3 text-[#FDB515] opacity-30" />
-      <Icon className="absolute h-10 w-10 -bottom-3 -right-3 text-[#FDB515] opacity-30" />
+      <Icon className="absolute h-10 w-10 -top-3 -left-3 text-[#FC9313] opacity-30" />
+      <Icon className="absolute h-10 w-10 -bottom-3 -left-3 text-[#FC9313] opacity-30" />
+      <Icon className="absolute h-10 w-10 -top-3 -right-3 text-[#FC9313] opacity-30" />
+      <Icon className="absolute h-10 w-10 -top-3 -left-3 text-[#FC9313] opacity-30" />
 
       <AnimatePresence>
         {hovered && (
@@ -77,8 +76,8 @@ const Card = ({
         group-hover/canvas-card:opacity-0 transition duration-200 w-full flex items-center justify-center">
           {icon}
         </div>
-        <h2 className="text-[#FDB515] text-center text-4xl opacity-0 group-hover/canvas-card:opacity-100
-         relative z-10 mt-4 font-bold group-hover/canvas-card:-translate-y-2 transition duration-200">
+        <h2 className="text-[#FC9313] text-center text-4xl opacity-0 group-hover/canvas-card:opacity-100
+            relative z-10 mt-4 font-bold group-hover/canvas-card:-translate-y-2 transition duration-200">
           {title}
         </h2>
         <p className="text-lg opacity-0 group-hover/canvas-card:opacity-100
@@ -96,9 +95,9 @@ const AceternityIcon = ({ order }: { order: string }) => {
     <div>
       <button className="relative inline-flex overflow-hidden rounded-full p-[1px]">
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
-         bg-[conic-gradient(from_90deg_at_50%_50%,#FDB515_0%,#002676_50%,#FDB515_100%)]" />
+            bg-[conic-gradient(from_90deg_at_50%_50%,#FC9313_0%,#010133_50%,#FC9313_100%)]" />
         <span className="inline-flex h-full w-full cursor-pointer items-center 
-        justify-center rounded-full bg-[#002676] px-5 py-2 text-[#FDB515] backdrop-blur-3xl font-bold text-2xl">
+            justify-center rounded-full bg-[#010133] px-5 py-2 text-[#FC9313] backdrop-blur-3xl font-bold text-2xl">
           {order}
         </span>
       </button>
