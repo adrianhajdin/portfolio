@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { IoCopyOutline } from "react-icons/io5";
+import React, { useState } from "react";
+import { IoDownloadOutline } from "react-icons/io5";
 
 // Also install this npm i --save-dev @types/react-lottie
 import Lottie from "react-lottie";
@@ -52,25 +52,35 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+  const leftLists = ["ReactJS", "Java", "Typescript"];
+  const rightLists = ["Python", "NextJS", "SpringBoot"];
 
-  const [copied, setCopied] = useState(false);
+  const [downloaded, setDownloaded] = useState(false);
 
   const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
+    loop: downloaded,
+    autoplay: downloaded,
     animationData: animationData,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
 
+  /*
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "stonewerner@berkeley.edu";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
+  */
+
+  const handleDownload = () => {
+    window.open('/Stone_Werner_Resume.pdf', '_blank', 'noopener,noreferrer');
+
+    setDownloaded(true);
+    setTimeout(() => setDownloaded(false), 3000); // Reset after 3 seconds
+    
+  }
 
   return (
     <div
@@ -176,7 +186,7 @@ export const BentoGridItem = ({
               {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
               {/* add handleCopy() for the copy the text */}
               <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
+                className={`absolute -bottom-5 right-0 ${downloaded ? "block" : "block"
                   }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
@@ -184,10 +194,10 @@ export const BentoGridItem = ({
               </div>
 
               <MagicButton
-                title={copied ? "Email is Copied!" : "Copy my email address"}
-                icon={<IoCopyOutline />}
+                title={downloaded ? "Resume Opened!" : "Open my Resume"}
+                icon={<IoDownloadOutline />}
                 position="left"
-                handleClick={handleCopy}
+                handleClick={handleDownload}
                 otherClasses="!bg-[#161A31]"
               />
             </div>
