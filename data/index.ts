@@ -39,7 +39,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Professional developer with entrepreneurial spirit",
+    title: "Professional developer with an entrepreneurial spirit",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -73,68 +73,68 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+    title: "IntelliDrive - AI Storage",
+    des: "Storing everything for you and your academic needs. All in one place, supercharged by AI.",
     img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    iconLists: ["/next.svg", "re.svg", "/tail.svg", "/ts.svg",  "/c.svg"],
+    link: "https://drive.stonewerner.com",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
+    title: "SASI Store",
+    des: "My online merchandise store to raise funds for various causes my friends and I care about.",
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    link: "https://store.stonewerner.com",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+    title: "AI Rate My Professor",
+    des: "RAG-powered AI chatbot that allows users to query any information about their school's professors and courses.",
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    link: "",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+    title: "Flashcard SaaS",
+    des: "A Software-as-a-Service app to quickly and easily generate and save flashcards on any topic.",
     img: "/p4.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    link: "",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Stone did an amazing job on our website! He was super professional, easy to communicate with, and really knew his stuff. The site looks great, runs faster, and the user experience is way better. I'm really impressed with his work and would definitely recommend him to anyone.",
+    name: "Chef Whitney",
+    title: "Head of Roast Restaurant Group",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Stone did an amazing job on our website! He was super professional, easy to communicate with, and really knew his stuff. The site looks great, runs faster, and the user experience is way better. I'm really impressed with his work and would definitely recommend him to anyone.",
+    name: "Chef Whitney",
+    title: "Head of Roast Restaurant Group",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Stone did an amazing job on our website! He was super professional, easy to communicate with, and really knew his stuff. The site looks great, runs faster, and the user experience is way better. I'm really impressed with his work and would definitely recommend him to anyone.",
+    name: "Chef Whitney",
+    title: "Head of Roast Restaurant Group",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Stone did an amazing job on our website! He was super professional, easy to communicate with, and really knew his stuff. The site looks great, runs faster, and the user experience is way better. I'm really impressed with his work and would definitely recommend him to anyone.",
+    name: "Chef Whitney",
+    title: "Head of Roast Restaurant Group",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Stone did an amazing job on our website! He was super professional, easy to communicate with, and really knew his stuff. The site looks great, runs faster, and the user experience is way better. I'm really impressed with his work and would definitely recommend him to anyone.",
+    name: "Chef Whitney",
+    title: "Head of Roast Restaurant Group",
   },
 ];
 

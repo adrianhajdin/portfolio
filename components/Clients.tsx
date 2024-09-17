@@ -24,7 +24,8 @@ const Clients = () => {
             speed="slow"
           />
         </div>
-
+        {/* Commenting out the companies section until we figure out a better use of these */}
+        {/* 
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
           {companies.map((company) => (
             <React.Fragment key={company.id}>
@@ -44,6 +45,7 @@ const Clients = () => {
             </React.Fragment>
           ))}
         </div>
+        */}
       </div>
     </section>
   );
