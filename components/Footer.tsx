@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <img
           src="/footer-grid.svg"
-          alt="grid"
+          alt="Stone Werner"
           className="w-full h-full opacity-50 "
         />
       </div>
