@@ -92,7 +92,7 @@ export const projects = [
     des: "RAG-powered AI chatbot that allows users to query any information about their school's professors and courses.",
     img: "/rmp.jpg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "",
+    link: "https://github.com/stonewerner/rag-rmp",
   },
   {
     id: 4,
@@ -100,7 +100,7 @@ export const projects = [
     des: "A Software-as-a-Service app to quickly and easily generate and save flashcards on any topic.",
     img: "/flashcard.webp",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "",
+    link: "https://github.com/stonewerner/flashcard-saas-2",
   },
 ];
 

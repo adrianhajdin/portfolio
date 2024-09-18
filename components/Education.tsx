@@ -54,10 +54,6 @@ const Card = ({
         backgroundImage: "linear-gradient(90deg, #010133 0%, #010122 100%)",
     }}
     >
-      <Icon className="absolute h-10 w-10 -top-3 -left-3 text-[#FC9313] opacity-30" />
-      <Icon className="absolute h-10 w-10 -bottom-3 -left-3 text-[#FC9313] opacity-30" />
-      <Icon className="absolute h-10 w-10 -top-3 -right-3 text-[#FC9313] opacity-30" />
-      <Icon className="absolute h-10 w-10 -top-3 -left-3 text-[#FC9313] opacity-30" />
 
       <AnimatePresence>
         {hovered && (
