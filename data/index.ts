@@ -199,7 +199,7 @@ export const workExperience = [
     id: 4,
     title: "Freelance Web Developer",
     subtitle: "Self Employed",
-    desc: "Create robust websites for businesses to boost their online presence and conversion rates.",
+    desc: "Creating robust websites for businesses to boost their online presence and conversion rates.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },

@@ -6,7 +6,7 @@ const Education = () => {
   return (
     <section id="education" className="w-full py-20">
       <h1 className="heading text-white">
-        My <span className="text-purple">Education</span>
+        My <span className="text-purple">education</span>
       </h1>
       <div className="my-20 w-full">
         <Card

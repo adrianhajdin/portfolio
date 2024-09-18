@@ -52,8 +52,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Java", "Spring Boot"];
-  const rightLists = ["Python", "Typescript", "NextJS"];
+  const leftLists = ["ReactJS", "Java", "Spring Boot", "PostgreSQL"];
+  const rightLists = ["Python", "Typescript", "NextJS", "C"];
 
   const [downloaded, setDownloaded] = useState(false);
 
