@@ -113,9 +113,9 @@ export const testimonials = [
   },
   {
     quote:
-      "Stone did an amazing job on our website! He was super professional, easy to communicate with, and really knew his stuff. The site looks great, runs faster, and the user experience is way better. I'm really impressed with his work and would definitely recommend him to anyone.",
-    name: "Chef Whitney",
-    title: "Head of Roast Restaurant Group",
+      "I hired Stone to create my personal website, and he absolutely crushed it. He jumped right in with great ideas and handled everything so quickly. I was impressed by how thorough he was with all the details. The whole process was super smooth, and the end result looks fantastic!",
+    name: "Kamran Lucas",
+    title: "Junior Executive at Sony Pictures",
   },
   {
     quote:
@@ -125,15 +125,21 @@ export const testimonials = [
   },
   {
     quote:
-      "Stone did an amazing job on our website! He was super professional, easy to communicate with, and really knew his stuff. The site looks great, runs faster, and the user experience is way better. I'm really impressed with his work and would definitely recommend him to anyone.",
-    name: "Chef Whitney",
-    title: "Head of Roast Restaurant Group",
+      "I hired Stone to create my personal website, and he absolutely crushed it. He jumped right in with great ideas and handled everything so quickly. I was impressed by how thorough he was with all the details. The whole process was super smooth, and the end result looks fantastic!",
+    name: "Kamran Lucas",
+    title: "Junior Executive at Sony Pictures",
   },
   {
     quote:
       "Stone did an amazing job on our website! He was super professional, easy to communicate with, and really knew his stuff. The site looks great, runs faster, and the user experience is way better. I'm really impressed with his work and would definitely recommend him to anyone.",
     name: "Chef Whitney",
     title: "Head of Roast Restaurant Group",
+  },
+  {
+    quote:
+      "I hired Stone to create my personal website, and he absolutely crushed it. He jumped right in with great ideas and handled everything so quickly. I was impressed by how thorough he was with all the details. The whole process was super smooth, and the end result looks fantastic!",
+    name: "Kamran Lucas",
+    title: "Junior Executive at Sony Pictures",
   },
 ];
 
