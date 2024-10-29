@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/pdfs/:path*",
+      "destination": "/public/pdfs/:path*"
+    }
+  ]
+}
