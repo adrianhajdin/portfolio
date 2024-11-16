@@ -10,12 +10,14 @@ export const PinContainer = ({
   href,
   className,
   containerClassName,
+  link,
 }: {
   children: React.ReactNode;
   title?: string;
   href?: string;
   className?: string;
   containerClassName?: string;
+  link?: string;
 }) => {
   const [transform, setTransform] = useState(
     "translate(-50%,-50%) rotateX(0deg)"
@@ -62,9 +64,11 @@ export const PinContainer = ({
 export const PinPerspective = ({
   title,
   href,
+  
 }: {
   title?: string;
   href?: string;
+  
 }) => {
   return (
     // change w-96 to w-full
