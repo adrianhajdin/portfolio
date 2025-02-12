@@ -114,26 +114,43 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   const _buildData = () => {
-    const arcs = data;
+    const arcs = data.filter(arc => {
+      // Validate that all required values are present and are valid numbers
+      return !isNaN(arc.startLat) && !isNaN(arc.startLng) && 
+             !isNaN(arc.endLat) && !isNaN(arc.endLng) &&
+             !isNaN(arc.arcAlt) && arc.color;
+    });
+
     let points = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
-      const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
+      const rgb = hexToRgb(arc.color);
+      
+      // Skip invalid colors
+      if (!rgb) continue;
+
       points.push({
         size: defaultProps.pointSize,
         order: arc.order,
         color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
-        lat: arc.startLat,
-        lng: arc.startLng,
+        lat: Number(arc.startLat),
+        lng: Number(arc.startLng),
       });
       points.push({
         size: defaultProps.pointSize,
         order: arc.order,
         color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
-        lat: arc.endLat,
-        lng: arc.endLng,
+        lat: Number(arc.endLat),
+        lng: Number(arc.endLng),
       });
     }
+
+    // Validate points before filtering
+    points = points.filter(point => 
+      !isNaN(point.lat) && !isNaN(point.lng) &&
+      point.lat >= -90 && point.lat <= 90 && 
+      point.lng >= -180 && point.lng <= 180
+    );
 
     // remove duplicates for same lat and lng
     const filteredPoints = points.filter(
@@ -165,41 +182,37 @@ export function Globe({ globeConfig, data }: WorldProps) {
   }, [globeData]);
 
   const startAnimation = () => {
-    if (!globeRef.current || !globeData) return;
+    if (!globeRef.current || !globeData || globeData.length === 0) return;
 
-    globeRef.current
-      .arcsData(data)
-      .arcStartLat((d) => (d as { startLat: number }).startLat * 1)
-      .arcStartLng((d) => (d as { startLng: number }).startLng * 1)
-      .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
-      .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
-      .arcColor((e: any) => (e as { color: string }).color)
-      .arcAltitude((e) => {
-        return (e as { arcAlt: number }).arcAlt * 1;
-      })
-      .arcStroke((e) => {
-        return [0.32, 0.28, 0.3][Math.round(Math.random() * 2)];
-      })
-      .arcDashLength(defaultProps.arcLength)
-      .arcDashInitialGap((e) => (e as { order: number }).order * 1)
-      .arcDashGap(15)
-      .arcDashAnimateTime((e) => defaultProps.arcTime);
+    try {
+      globeRef.current
+        .arcsData(data)
+        .arcStartLat((d) => Number((d as { startLat: number }).startLat))
+        .arcStartLng((d) => Number((d as { startLng: number }).startLng))
+        .arcEndLat((d) => Number((d as { endLat: number }).endLat))
+        .arcEndLng((d) => Number((d as { endLng: number }).endLng))
+        .arcColor((e: any) => (e as { color: string }).color)
+        .arcAltitude((e) => {
+          const alt = Number((e as { arcAlt: number }).arcAlt);
+          return isNaN(alt) ? 0.1 : alt;
+        })
+        .arcStroke((e) => {
+          return [0.32, 0.28, 0.3][Math.round(Math.random() * 2)];
+        })
+        .arcDashLength(defaultProps.arcLength)
+        .arcDashInitialGap((e) => Number((e as { order: number }).order) || 0)
+        .arcDashGap(15)
+        .arcDashAnimateTime((e) => defaultProps.arcTime);
 
-    globeRef.current
-      .pointsData(data)
-      .pointColor((e) => (e as { color: string }).color)
-      .pointsMerge(true)
-      .pointAltitude(0.0)
-      .pointRadius(2);
-
-    globeRef.current
-      .ringsData([])
-      .ringColor((e: any) => (t: any) => e.color(t))
-      .ringMaxRadius(defaultProps.maxRings)
-      .ringPropagationSpeed(RING_PROPAGATION_SPEED)
-      .ringRepeatPeriod(
-        (defaultProps.arcTime * defaultProps.arcLength) / defaultProps.rings
-      );
+      globeRef.current
+        .pointsData(globeData)
+        .pointColor((e) => (e as { color: (t: number) => string }).color(0))
+        .pointsMerge(true)
+        .pointAltitude(0.0)
+        .pointRadius(2);
+    } catch (error) {
+      console.error('Error initializing globe animations:', error);
+    }
   };
 
   useEffect(() => {
